@@ -17,7 +17,7 @@
 
 <body>
     <!--Header and Menu Section-->
-    <header class="container">
+    <header id="header-hide" class="container">
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -29,7 +29,7 @@
     </header>
 
     <!--Booking Section-->
-    <main class="main-content container">
+    <main id="mainSection" class="main-content  container">
         <div class="booking-form">
             <h3>Booking Flights</h3>
             <div class="input-group">
@@ -99,15 +99,20 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button id="book-now" class="btn-style">Book Now</button>
         </div>
 
         <div class="booking-content">
             <h1>discover <br> around the world</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
         </div>
+    </main>
+    <section id="userTricket">
+        <h1 id="book-confirmed" ><span id="green">Congratulations</span>, your booking has been successfully confirmed</h1>
     </section>
+
     <script>
+
 
         // All button add Event Listener added
         document.getElementById('first-class-increase').addEventListener('click', function() {
@@ -122,6 +127,7 @@
         document.getElementById('economy-decrease').addEventListener('click', function() {
              SelecteAirTricket('economy', false);
             });
+            
 
 
         // this function is created  for calculate total cost vat and subtotal
@@ -156,8 +162,19 @@
             return ticketCount;
         }
 
+
+        // booking button
+        document.getElementById('book-now').addEventListener('click', function(){
+            const mainSection = document.getElementById('mainSection');
+             mainSection.style.display = 'none';
+             document.getElementById('header-hide').style.display = 'none';
+             document.getElementById('userTricket').style.display = 'block';
+
+        })
+
        
     </script>
+   
 
     <!--Thank You-->
 </body>

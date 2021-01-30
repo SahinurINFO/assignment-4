@@ -134,3 +134,16 @@ button#economy-increase {
 button#economy-decrease {
     margin-top: 27px;
 }
+h1#book-confirmed {
+    margin: 0 auto;
+    background: white;
+    text-align: center;
+    padding: 336px;
+}
+span#green {
+    color: green;
+    font-weight: bold;
+}
+#userTricket{
+    display: none;
+}
